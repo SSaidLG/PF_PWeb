@@ -1,3 +1,14 @@
+<?php
+session_start(); // Iniciar la sesión
+
+// Verificar si la sesión contiene el ID del empleado
+if (!isset($_SESSION['id_empleado'])) {
+    // Redirigir al login si no hay sesión activa
+    header("location: ./login/index.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
